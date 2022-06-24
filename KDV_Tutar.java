@@ -10,11 +10,8 @@ public class KDV_Tutar
         System.out.println("Lütfen ücret tutarını giriniz => ");
         tutar = input.nextDouble();
 
-        kdvTutar = tutar * kdvTutar1;
-        if(tutar>=1000)
-        {
-            kdvTutar = tutar * kdvTutar2;
-        }
+        kdvTutar = (tutar<1000) ? tutar * kdvTutar1 : tutar * kdvTutar2;
+        
         System.out.println("KDV = " + kdvTutar);
         System.out.println("Toplam Tutar = " + (tutar + kdvTutar));
 
